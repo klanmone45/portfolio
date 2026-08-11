@@ -1,0 +1,211 @@
+.showcase-page .case-kv img {
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: contain;
+  transform: none;
+}
+
+.showcase-works {
+  border-top: 0 !important;
+  padding: 100px 0 40px;
+}
+
+.showcase-groups {
+  display: grid;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.showcase-group {
+  background: var(--case-blue);
+  padding: 40px 0;
+  overflow: hidden;
+}
+
+.showcase-group-copy,
+.showcase-media {
+  width: 824px;
+  margin-left: 144px;
+}
+
+.showcase-group-copy {
+  width: 744px;
+  margin-left: 288px;
+}
+.showcase-group-copy h3 { margin: 0 0 20px; }
+.showcase-group-copy p { margin: 0; font-size: 16px; line-height: 1.32; }
+.showcase-media { margin-top: 20px; }
+.showcase-media img,
+.showcase-media video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: #111;
+}
+
+.showcase-media--hero-pair {
+  display: grid;
+  grid-template-columns: 285px minmax(0, 507px);
+  gap: 31px;
+  align-items: start;
+}
+.showcase-media--hero-pair > :first-child { aspect-ratio: 1; }
+.showcase-media--hero-pair > :last-child { aspect-ratio: 1; }
+.showcase-square-note {
+  width: 285px;
+  align-self: start;
+}
+.showcase-square-note img {
+  width: 285px;
+  height: 285px;
+  object-fit: cover;
+}
+.showcase-square-note p {
+  margin: 20px 0 0;
+  font-size: 16px;
+  line-height: 1.32;
+}
+.showcase-inline-link {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 0.16em;
+}
+
+.showcase-media--portrait-grid {
+  width: 590px;
+  margin-left: 287px;
+  display: grid;
+  grid-template-columns: repeat(2, 285px);
+  gap: 20px;
+}
+.showcase-media--portrait-grid > * { aspect-ratio: 285 / 507; }
+.showcase-media--portrait-grid > .showcase-span { grid-column: 1 / -1; width: 285px; }
+
+.showcase-media--single-square { width: 507px; margin-left: 287px; }
+.showcase-media--single-square > * { aspect-ratio: 1; }
+
+.showcase-media--portrait-pair {
+  width: 590px;
+  margin-left: 287px;
+  display: grid;
+  grid-template-columns: repeat(2, 285px);
+  gap: 20px;
+}
+.showcase-media--portrait-pair > * { aspect-ratio: 285 / 507; }
+
+.showcase-media--mixed-stack { display: grid; gap: 31px; }
+.showcase-media--mixed-row {
+  display: grid;
+  grid-template-columns: 285px minmax(0, 507px);
+  gap: 31px;
+}
+.showcase-media--mixed-row > :first-child { aspect-ratio: 285 / 507; }
+.showcase-media--mixed-row > :last-child { aspect-ratio: 1; }
+.showcase-media--mixed-row + .showcase-media--portrait-pair { margin-left: 0; }
+.showcase-media--mixed-stack .showcase-media--portrait-pair {
+  width: 601px;
+  gap: 31px;
+}
+
+.case-page--alcon .showcase-media--portrait-pair {
+  width: 610px;
+  gap: 40px;
+}
+
+.showcase-media--alcon-final {
+  display: grid;
+  grid-template-columns: 285px minmax(0, 507px);
+  gap: 31px;
+}
+.showcase-media--alcon-final > :nth-child(1) { aspect-ratio: 285 / 507; }
+.showcase-media--alcon-final > :nth-child(2) { aspect-ratio: 1; }
+.showcase-media--alcon-final > :nth-child(3) {
+  grid-column: 1 / -1;
+  width: 507px;
+  margin-left: 143px;
+  aspect-ratio: 1;
+}
+
+@media (max-width: 980px) {
+  .showcase-group { padding: 32px; }
+  .showcase-group-copy { width: 76%; margin-left: 20%; }
+  .showcase-media { width: 88%; margin-left: 6%; }
+  .showcase-media--portrait-grid,
+  .showcase-media--portrait-pair,
+  .case-page--alcon .showcase-media--portrait-pair,
+  .showcase-media--mixed-stack .showcase-media--portrait-pair { width: min(590px, 88%); }
+  .showcase-media--single-square { width: min(507px, 72%); }
+  .showcase-media--hero-pair,
+  .showcase-media--mixed-row,
+  .showcase-media--alcon-final { grid-template-columns: minmax(0, .562fr) minmax(0, 1fr); gap: 24px; }
+  .showcase-media--portrait-grid,
+  .showcase-media--portrait-pair { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+  .showcase-media--alcon-final > :nth-child(3) { width: 61.3%; margin-left: 17.3%; }
+}
+
+@media (max-width: 700px) {
+  .showcase-works { padding-top: 64px; }
+  .showcase-groups { margin-top: 28px; gap: 24px; }
+  .showcase-group { padding: 20px 12px; }
+  .showcase-group-copy,
+  .showcase-media,
+  .showcase-media--portrait-grid,
+  .showcase-media--portrait-pair,
+  .showcase-media--single-square {
+    width: 100%;
+    margin-left: 0;
+  }
+  .showcase-group-copy p { font-size: 14px; }
+  .showcase-media { margin-top: 18px; }
+  .showcase-media--hero-pair,
+  .showcase-media--mixed-row,
+  .showcase-media--alcon-final { grid-template-columns: 1fr; gap: 12px; }
+  .showcase-media--hero-pair > :first-child,
+  .showcase-media--mixed-row > :first-child,
+  .showcase-media--alcon-final > :nth-child(1) { width: 56.2%; justify-self: center; }
+  .showcase-square-note { width: 56.2%; justify-self: center; }
+  .showcase-square-note img { width: 100%; height: auto; aspect-ratio: 1; }
+  .showcase-square-note p { font-size: 14px; }
+  .showcase-media--portrait-grid,
+  .showcase-media--portrait-pair { gap: 12px; }
+  .showcase-media--portrait-grid > .showcase-span { width: 100%; }
+  .showcase-media--mixed-stack { gap: 12px; }
+  .showcase-media--alcon-final > :nth-child(3) {
+    grid-column: auto;
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .case-page--jagermeister .showcase-media--hero-pair .showcase-square-note {
+    display: contents;
+  }
+  .case-page--jagermeister .showcase-media--hero-pair .showcase-square-note img {
+    order: 1;
+    width: 100%;
+  }
+  .case-page--jagermeister .showcase-media--hero-pair > video { order: 2; }
+  .case-page--jagermeister .showcase-media--hero-pair .showcase-square-note p {
+    order: 3;
+    width: 100%;
+    margin: 0;
+  }
+  .case-page--jagermeister .showcase-media--mixed-stack .showcase-media--portrait-pair,
+  .case-page--alcon .showcase-media--portrait-pair {
+    grid-template-columns: 1fr;
+    width: 100%;
+    gap: 12px;
+  }
+  .case-page--alcon .showcase-media--hero-pair > :first-child {
+    width: 100%;
+    aspect-ratio: 285 / 507;
+    justify-self: stretch;
+  }
+  .case-page--jagermeister .showcase-media--mixed-row > :first-child,
+  .case-page--alcon .showcase-media--alcon-final > :first-child {
+    width: 100%;
+    justify-self: stretch;
+  }
+}
