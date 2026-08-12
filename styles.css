@@ -143,9 +143,12 @@ h1 { margin: 0; font-size: 64px; line-height: 68px; letter-spacing: -.06em; font
   object-position: center center;
 }
 .project-image--jagermeister,
-.project-image--alcon {
+.project-image--alcon,
+.project-image--selected {
   height: calc(100% - 100px);
 }
+.project-image--selected { background: #050505; }
+.project-image--selected img { object-fit: cover; object-position: center center; }
 .project-image--new-year img {
   left: 46.1%;
   top: -7.8%;

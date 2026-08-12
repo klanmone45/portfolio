@@ -99,7 +99,8 @@ if (!reduceMotion && 'IntersectionObserver' in window) {
 }
 
 const backToTop = document.querySelector('.case-back-to-top');
-const firstCaseBlock = document.querySelector('.case-overview');
+const overviewBlock = document.querySelector('.case-overview');
+const firstCaseBlock = overviewBlock || document.querySelector('.case-main > .case-section');
 const contentEdge = document.querySelector('.case-inner');
 const footer = document.querySelector('.footer');
 
@@ -107,7 +108,9 @@ const updateBackToTop = () => {
   if (!backToTop || !firstCaseBlock || !contentEdge || !footer) return;
 
   const headerHeight = document.querySelector('.topbar')?.offsetHeight || 0;
-  const firstBlockEnd = firstCaseBlock.offsetTop + firstCaseBlock.offsetHeight;
+  const firstBlockEnd = overviewBlock
+    ? firstCaseBlock.offsetTop + firstCaseBlock.offsetHeight
+    : firstCaseBlock.offsetTop + Math.min(320, firstCaseBlock.offsetHeight * 0.25);
   const contentRight = contentEdge.getBoundingClientRect().right;
   const buttonBottom = parseFloat(getComputedStyle(backToTop).bottom) || 0;
   const floatingButtonBottom = window.innerHeight - buttonBottom;
