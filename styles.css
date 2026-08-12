@@ -307,7 +307,8 @@ h1 { margin: 0; font-size: 64px; line-height: 68px; letter-spacing: -.06em; font
   .project-featured { grid-column: auto; }
   .project-card { height: 340px; }
   .project-image--jagermeister,
-  .project-image--alcon { height: calc(100% - 96px); }
+  .project-image--alcon,
+  .project-image--selected { height: calc(100% - 96px); }
   .project-caption { height: 96px; padding: 15px 12px; gap: 10px; }
   .project-caption > span { font-size: 10px; }
   .project-caption h3 { font-size: 18px; }

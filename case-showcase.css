@@ -198,6 +198,11 @@
     width: 100%;
     gap: 12px;
   }
+  .case-page--jagermeister .showcase-group:last-child .showcase-media--mixed-stack,
+  .case-page--jagermeister .showcase-group:last-child .showcase-media--mixed-row,
+  .case-page--jagermeister .showcase-group:last-child .showcase-media--portrait-pair {
+    gap: 20px;
+  }
   .case-page--alcon .showcase-media--hero-pair > :first-child {
     width: 100%;
     aspect-ratio: 285 / 507;
