@@ -41,8 +41,8 @@
 
 .delivery-fivepost-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
 .delivery-fivepost-grid img { aspect-ratio: 535 / 669; }
-.delivery-video { width: min(824px, 100%); margin: 40px auto 0; aspect-ratio: 16 / 9; overflow: hidden; background: #111; }
-.delivery-video video { display: block; width: 100%; height: 100%; object-fit: cover; }
+.delivery-video { width: min(680px, 100%); margin: 40px auto 0; aspect-ratio: 53 / 42; overflow: hidden; background: #111; }
+.delivery-video video { display: block; width: 100%; height: 100%; object-fit: contain; }
 .delivery-section--geo .delivery-copy { margin-top: 16px; }
 
 .delivery-portrait-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
@@ -104,7 +104,7 @@
   .delivery-sticker-grid > :nth-child(-n+2) { aspect-ratio: 535 / 830; }
   .delivery-sticker-grid .span-2 { aspect-ratio: 3 / 2; }
   .delivery-fivepost-grid img { aspect-ratio: 535 / 669; }
-  .delivery-video { margin-top: 28px; aspect-ratio: 16 / 9; }
+  .delivery-video { margin-top: 28px; aspect-ratio: 53 / 42; }
   .delivery-section--geo .delivery-copy { margin-top: 16px; }
   .delivery-portrait-grid { grid-template-columns: 1fr 1fr; }
   .delivery-other-grid .other-wide { aspect-ratio: 1112 / 414; }
